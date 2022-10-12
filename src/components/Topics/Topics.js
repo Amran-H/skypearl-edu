@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row';
 import { useLoaderData } from "react-router-dom";
 import Topic from '../Topic/Topic';
 import Container from 'react-bootstrap/Container';
-import Slider from '../Slider/Slider';
 
 const Topics = () => {
     const topics = useLoaderData();
@@ -17,7 +16,8 @@ const Topics = () => {
                         topics.data.map(topic =>
 
                             <Topic
-                                key={topics.id}
+                                key={topic.id}
+
                                 topic={topic}
                             ></Topic>)
                     }
