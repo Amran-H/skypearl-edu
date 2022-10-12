@@ -6,6 +6,7 @@ const About = () => {
         <div>
 
             <h1>We are ensuring quality education</h1>
+
         </div>
     );
 };
