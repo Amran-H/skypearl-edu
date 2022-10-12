@@ -1,8 +1,8 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
 import { useLoaderData } from "react-router-dom";
 import Topic from '../Topic/Topic';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Topics = () => {
     const topics = useLoaderData();

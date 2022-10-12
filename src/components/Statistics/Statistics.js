@@ -23,17 +23,19 @@ const Statistics = () => {
     ];
     return (
         <div className=''>
-
-            <LineChart
-                width={380}
-                height={300}
-                data={data}
-            >
-                <Line type="monotone" dataKey="total" stroke="#8884d8" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip></Tooltip>
-            </LineChart>
+            <h2 className='my-5'>A LineChart based on the quantity of questions</h2>
+            <div className=' d-flex justify-content-center '>
+                <LineChart
+                    width={380}
+                    height={300}
+                    data={data}
+                >
+                    <Line type="monotone" dataKey="total" stroke="#8884d8" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip></Tooltip>
+                </LineChart>
+            </div>
 
         </div>
     );
