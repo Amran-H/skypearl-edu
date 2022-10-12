@@ -1,15 +1,36 @@
 import React from 'react';
-import Header from '../Header/Header';
+import { Container, Row } from 'react-bootstrap';
+import { useLoaderData } from 'react-router-dom';
 import Slider from '../Slider/Slider';
-import Topics from '../Topics/Topics';
+import Topic from '../Topic/Topic';
+
+
 
 const Home = () => {
+    const topics = useLoaderData();
+    console.log(topics.data)
     return (
         <div>
 
             <Slider></Slider>
+            <br />
 
-        </div>
+            <h3 className='mb-5 mt-4'>Topics: {topics.data.length}</h3>
+            <div className='mb-5'>
+                <Container>
+                    <Row>
+                        {
+                            topics.data.map(topic => <Topic
+                                key={topic.id}
+                                topic={topic}
+                            ></Topic>
+
+                            )
+                        }
+                    </Row>
+                </Container>
+            </div>
+        </div >
     );
 };
 

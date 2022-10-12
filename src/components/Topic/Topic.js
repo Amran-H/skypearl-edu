@@ -1,14 +1,14 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import Col from 'react-bootstrap/Col';
 
 const Topic = ({ topic }) => {
     const { name, logo, total } = topic;
     return (
-        <div className='rounded '>
+        <Col className='rounded '>
             <Card style={{ width: '18rem' }}>
-                <div style={{}}>
+                <div>
                     <div className='bg-dark'>
                         <Card.Img variant="top" src={logo} />
                     </div>
@@ -21,9 +21,7 @@ const Topic = ({ topic }) => {
                     </Card.Body>
                 </div>
             </Card>
-
-        </div>
-
+        </Col>
     );
 };
 

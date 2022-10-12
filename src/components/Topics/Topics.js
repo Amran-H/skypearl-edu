@@ -2,32 +2,25 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import { useLoaderData } from "react-router-dom";
 import Topic from '../Topic/Topic';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
-
+import Slider from '../Slider/Slider';
 
 const Topics = () => {
     const topics = useLoaderData();
     console.log(topics.data)
     return (
         <div>
-
-            <h4>Total topics: {topics.data.length}</h4>
+            <h1 className='my-4 text-primary'>You have four topics to choose from</h1>
             <Container>
                 <Row>
-                    <Col>
-                        <div>
-                            {
-                                topics.data.map(topic =>
+                    {
+                        topics.data.map(topic =>
 
-                                    <Topic
-                                        key={topics.data.id}
-                                        topic={topic}
-                                    ></Topic>)
-                            }
-                        </div>
-                    </Col>
+                            <Topic
+                                key={topics.id}
+                                topic={topic}
+                            ></Topic>)
+                    }
                 </Row>
             </Container>
         </div>
